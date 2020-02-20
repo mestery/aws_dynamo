@@ -25,7 +25,7 @@
 extern "C" {
 #endif
 
-#define AWS_DYNAMO_DEFAULT_HOST "dynamodb.us-east-1.amazonaws.com"
+#define AWS_DYNAMO_DEFAULT_HOST "127.0.0.1:8000"
 #define AWS_DYNAMO_DEFAULT_REGION "us-east-1"
 
 /* AWS DynamoDB HTTP headers names.  These are all lowercase
