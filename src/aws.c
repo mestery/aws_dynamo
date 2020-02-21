@@ -93,9 +93,9 @@ struct aws_handle *aws_init(const char *aws_id, const char *aws_key) {
 
 	aws->dynamo_max_retries = AWS_DYNAMO_DEFAULT_MAX_RETRIES;
 	aws->dynamo_https = AWS_DYNAMO_DEFAULT_HTTPS;
-	aws->dynamo_host = NULL;
-	aws->dynamo_port = 0;
-	aws->dynamo_region = NULL;
+	aws->dynamo_host = getenv("AWS_DYNAMO_HOST");
+	aws->dynamo_port = getenv("AWS_DYNAMO_PORT");
+	aws->dynamo_region = getenv("AWS_DYNAMO_REGION");
 
 	return aws;
 
